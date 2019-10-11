@@ -1,0 +1,1957 @@
+[
+    {
+      "id": "a2174fd2.516a1",
+      "type": "tab",
+      "label": "DataFlow",
+      "disabled": false,
+      "info": ""
+    },
+    {
+      "id": "fae84d4d.b0c77",
+      "type": "tab",
+      "label": "Dasboard",
+      "disabled": false,
+      "info": ""
+    },
+    {
+      "id": "a1877da4.03796",
+      "type": "postgresdb",
+      "z": "",
+      "hostname": "192.168.1.75",
+      "port": "5432",
+      "db": "aaas_db",
+      "ssl": false
+    },
+    {
+      "id": "4a5f0037.6fb47",
+      "type": "ui_base",
+      "theme": {
+        "name": "theme-dark",
+        "lightTheme": {
+          "default": "#0094CE",
+          "baseColor": "#0094CE",
+          "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+          "edited": true,
+          "reset": false
+        },
+        "darkTheme": {
+          "default": "#097479",
+          "baseColor": "#097479",
+          "baseFont": "Verdana,Verdana,Geneva,sans-serif",
+          "edited": true,
+          "reset": false
+        },
+        "customTheme": {
+          "name": "Untitled Theme 1",
+          "default": "#4B7930",
+          "baseColor": "#4B7930",
+          "baseFont": "Verdana,Verdana,Geneva,sans-serif",
+          "reset": false
+        },
+        "themeState": {
+          "base-color": {
+            "default": "#097479",
+            "value": "#097479",
+            "edited": false
+          },
+          "page-titlebar-backgroundColor": {
+            "value": "#097479",
+            "edited": false
+          },
+          "page-backgroundColor": {
+            "value": "#111111",
+            "edited": false
+          },
+          "page-sidebar-backgroundColor": {
+            "value": "#000000",
+            "edited": false
+          },
+          "group-textColor": {
+            "value": "#0eb8c0",
+            "edited": false
+          },
+          "group-borderColor": {
+            "value": "#555555",
+            "edited": false
+          },
+          "group-backgroundColor": {
+            "value": "#333333",
+            "edited": false
+          },
+          "widget-textColor": {
+            "value": "#eeeeee",
+            "edited": false
+          },
+          "widget-backgroundColor": {
+            "value": "#097479",
+            "edited": false
+          },
+          "widget-borderColor": {
+            "value": "#333333",
+            "edited": false
+          },
+          "base-font": {
+            "value": "Verdana,Verdana,Geneva,sans-serif"
+          }
+        },
+        "angularTheme": {
+          "primary": "indigo",
+          "accents": "blue",
+          "warn": "red",
+          "background": "grey"
+        }
+      },
+      "site": {
+        "name": "AAAS Dashboard",
+        "hideToolbar": "false",
+        "allowSwipe": "true",
+        "lockMenu": "false",
+        "allowTempTheme": "true",
+        "dateFormat": "DD/MM/YYYY",
+        "sizes": {
+          "sx": 48,
+          "sy": 48,
+          "gx": 6,
+          "gy": 6,
+          "cx": 6,
+          "cy": 6,
+          "px": 0,
+          "py": 0
+        }
+      }
+    },
+    {
+      "id": "62720bf2.e48104",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Dashboard",
+      "icon": "dashboard",
+      "order": 1,
+      "disabled": false,
+      "hidden": false
+    },
+    {
+      "id": "f936d824.261558",
+      "type": "ui_group",
+      "z": "",
+      "name": "dasboard_common",
+      "tab": "62720bf2.e48104",
+      "disp": false,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "79e134a0.cf1b4c",
+      "type": "ui_link",
+      "z": "",
+      "name": "Public App",
+      "link": "http://google.com",
+      "icon": "open_in_browser",
+      "target": "iframe",
+      "order": 4
+    },
+    {
+      "id": "4923a584.f7c9ac",
+      "type": "ui_group",
+      "z": "",
+      "name": "Status",
+      "tab": "62720bf2.e48104",
+      "order": 2,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "d9edc145.bd805",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "Node-RED",
+      "broker": "192.168.1.72",
+      "port": "1883",
+      "clientid": "Node-RED",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willPayload": ""
+    },
+    {
+      "id": "411b0b2e.a1fa34",
+      "type": "ui_group",
+      "z": "",
+      "name": "Home",
+      "tab": "",
+      "disp": true,
+      "width": "6",
+      "collapse": false
+    },
+    {
+      "id": "c0a80cfd.2f6f3",
+      "type": "ui_group",
+      "z": "",
+      "name": "Debug",
+      "tab": "",
+      "disp": true,
+      "width": "6",
+      "collapse": false
+    },
+    {
+      "id": "a8d7528a.20a72",
+      "type": "ui_group",
+      "z": "",
+      "name": "LED Testing",
+      "tab": "",
+      "disp": true,
+      "width": "4"
+    },
+    {
+      "id": "5af08869.5aada8",
+      "type": "ui_group",
+      "z": "",
+      "name": "Plant",
+      "tab": "62720bf2.e48104",
+      "order": 3,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "a708e985.1eee58",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Plant",
+      "icon": "dashboard",
+      "order": 2,
+      "disabled": false,
+      "hidden": false
+    },
+    {
+      "id": "4e207db3.358f54",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Weather",
+      "icon": "dashboard",
+      "order": 3,
+      "disabled": false,
+      "hidden": false
+    },
+    {
+      "id": "3bd6f275.6046fe",
+      "type": "ui_group",
+      "z": "",
+      "name": "TimeSerie",
+      "tab": "a708e985.1eee58",
+      "order": 2,
+      "disp": false,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "b2394d2e.1c543",
+      "type": "ui_group",
+      "z": "",
+      "name": "Summary",
+      "tab": "a708e985.1eee58",
+      "order": 1,
+      "disp": false,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "b9ea5d63.40d66",
+      "type": "ui_group",
+      "z": "",
+      "name": "Summary",
+      "tab": "4e207db3.358f54",
+      "order": 1,
+      "disp": false,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "24556abf.bea436",
+      "type": "ui_group",
+      "z": "",
+      "name": "TimeSerie",
+      "tab": "4e207db3.358f54",
+      "order": 2,
+      "disp": false,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "c7b25467.d3ce58",
+      "type": "ui_group",
+      "z": "",
+      "name": "Weather",
+      "tab": "62720bf2.e48104",
+      "order": 4,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "e05b669b.eb93e8",
+      "type": "ui_group",
+      "z": "",
+      "name": "Alerts",
+      "tab": "62720bf2.e48104",
+      "order": 5,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "8581afbf.aa29a",
+      "type": "ui_group",
+      "z": "",
+      "name": "Current",
+      "tab": "a708e985.1eee58",
+      "order": 3,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "94e80235.637d1",
+      "type": "ui_group",
+      "z": "",
+      "name": "Alerts",
+      "tab": "a708e985.1eee58",
+      "order": 4,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "ac0138d0.74d198",
+      "type": "ui_group",
+      "z": "",
+      "name": "Current",
+      "tab": "4e207db3.358f54",
+      "order": 3,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "93ee4c0.96c50b8",
+      "type": "ui_group",
+      "z": "",
+      "name": "Alerts",
+      "tab": "4e207db3.358f54",
+      "order": 4,
+      "disp": true,
+      "width": "24",
+      "collapse": false
+    },
+    {
+      "id": "929a3f87.dbfc9",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "f936d824.261558",
+      "order": 0,
+      "width": "24",
+      "height": "1",
+      "name": "",
+      "label": "",
+      "format": "{{msg.payload}}",
+      "layout": "col-center",
+      "x": 490,
+      "y": 80,
+      "wires": []
+    },
+    {
+      "id": "9dd6ff49.75c3b",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "4923a584.f7c9ac",
+      "order": 1,
+      "width": "4",
+      "height": "2",
+      "name": "",
+      "label": "Plant Status",
+      "format": "<font color={{msg.data.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+      "layout": "col-center",
+      "x": 510,
+      "y": 1240,
+      "wires": []
+    },
+    {
+      "id": "a8ec8d4f.97a77",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "4923a584.f7c9ac",
+      "order": 3,
+      "width": "4",
+      "height": "2",
+      "name": "",
+      "label": "Weather Status",
+      "format": "<font color={{msg.data.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+      "layout": "col-center",
+      "x": 520,
+      "y": 1080,
+      "wires": []
+    },
+    {
+      "id": "3d6e5211.6b06ee",
+      "type": "ui_chart",
+      "z": "fae84d4d.b0c77",
+      "name": "PlantRealTime",
+      "group": "3bd6f275.6046fe",
+      "order": 0,
+      "width": "24",
+      "height": "4",
+      "label": "Last Measures",
+      "chartType": "line",
+      "legend": "true",
+      "xformat": "dd HH:mm",
+      "interpolate": "linear",
+      "nodata": "",
+      "dot": false,
+      "ymin": "",
+      "ymax": "",
+      "removeOlder": 1,
+      "removeOlderPoints": "",
+      "removeOlderUnit": "3600",
+      "cutout": 0,
+      "useOneColor": false,
+      "colors": [
+        "#1f77b4",
+        "#aec7e8",
+        "#ff7f0e",
+        "#2ca02c",
+        "#98df8a",
+        "#d62728",
+        "#ff9896",
+        "#9467bd",
+        "#c5b0d5"
+      ],
+      "useOldStyle": false,
+      "outputs": 1,
+      "x": 1100,
+      "y": 220,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "23862d48.43ffe2",
+      "type": "inject",
+      "z": "fae84d4d.b0c77",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 580,
+      "y": 280,
+      "wires": [
+        [
+          "2c347339.2a118c"
+        ]
+      ]
+    },
+    {
+      "id": "2c347339.2a118c",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "Clean",
+      "func": "msg.payload = [];\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 770,
+      "y": 280,
+      "wires": [
+        [
+          "c3f42e74.43f94"
+        ]
+      ]
+    },
+    {
+      "id": "c60cb548.99cb28",
+      "type": "ui_chart",
+      "z": "fae84d4d.b0c77",
+      "name": "PlantSummary",
+      "group": "b2394d2e.1c543",
+      "order": 0,
+      "width": "24",
+      "height": "4",
+      "label": "Summary (Last Week)",
+      "chartType": "bar",
+      "legend": "true",
+      "xformat": "HH:mm:ss",
+      "interpolate": "linear",
+      "nodata": "",
+      "dot": false,
+      "ymin": "",
+      "ymax": "",
+      "removeOlder": 1,
+      "removeOlderPoints": "",
+      "removeOlderUnit": "3600",
+      "cutout": 0,
+      "useOneColor": false,
+      "colors": [
+        "#1f77b4",
+        "#aec7e8",
+        "#ff7f0e",
+        "#2ca02c",
+        "#98df8a",
+        "#d62728",
+        "#ff9896",
+        "#9467bd",
+        "#c5b0d5"
+      ],
+      "useOldStyle": false,
+      "outputs": 1,
+      "x": 1040,
+      "y": 120,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "5d510c80.98ef14",
+      "type": "ui_chart",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherSummary",
+      "group": "b9ea5d63.40d66",
+      "order": 0,
+      "width": "24",
+      "height": "4",
+      "label": "Summary (Last Week)",
+      "chartType": "bar",
+      "legend": "true",
+      "xformat": "HH:mm:ss",
+      "interpolate": "linear",
+      "nodata": "",
+      "dot": false,
+      "ymin": "",
+      "ymax": "",
+      "removeOlder": 1,
+      "removeOlderPoints": "",
+      "removeOlderUnit": "3600",
+      "cutout": 0,
+      "useOneColor": false,
+      "colors": [
+        "#1f77b4",
+        "#aec7e8",
+        "#ff7f0e",
+        "#2ca02c",
+        "#98df8a",
+        "#d62728",
+        "#ff9896",
+        "#9467bd",
+        "#c5b0d5"
+      ],
+      "useOldStyle": false,
+      "outputs": 1,
+      "x": 1050,
+      "y": 60,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "c3f42e74.43f94",
+      "type": "ui_chart",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherRealTime",
+      "group": "24556abf.bea436",
+      "order": 0,
+      "width": "24",
+      "height": "4",
+      "label": "Last Measures",
+      "chartType": "line",
+      "legend": "true",
+      "xformat": "dd HH:mm",
+      "interpolate": "linear",
+      "nodata": "",
+      "dot": false,
+      "ymin": "",
+      "ymax": "",
+      "removeOlder": 1,
+      "removeOlderPoints": "",
+      "removeOlderUnit": "3600",
+      "cutout": 0,
+      "useOneColor": false,
+      "colors": [
+        "#1f77b4",
+        "#aec7e8",
+        "#ff7f0e",
+        "#2ca02c",
+        "#98df8a",
+        "#d62728",
+        "#ff9896",
+        "#9467bd",
+        "#c5b0d5"
+      ],
+      "useOldStyle": false,
+      "outputs": 1,
+      "x": 1110,
+      "y": 180,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "ac15a465.b57c68",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherTemperature",
+      "group": "c7b25467.d3ce58",
+      "order": 1,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Temperature",
+      "label": "ºC",
+      "format": "{{msg.data.temperature}}",
+      "min": "-10",
+      "max": "50",
+      "colors": [
+        "#00b500",
+        "#e6e600",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1420,
+      "y": 140,
+      "wires": []
+    },
+    {
+      "id": "db09c26a.a3a0f",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherHumidity",
+      "group": "c7b25467.d3ce58",
+      "order": 2,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Humidity",
+      "label": "%",
+      "format": "{{msg.data.humidity}}",
+      "min": "0",
+      "max": "100",
+      "colors": [
+        "#b54739",
+        "#24e636",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1410,
+      "y": 220,
+      "wires": []
+    },
+    {
+      "id": "da1ffa86.904028",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherPressure",
+      "group": "c7b25467.d3ce58",
+      "order": 3,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Pressure",
+      "label": "hPa",
+      "format": "{{msg.data.pressure}}",
+      "min": "900",
+      "max": "110",
+      "colors": [
+        "#b52125",
+        "#46e647",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1410,
+      "y": 300,
+      "wires": []
+    },
+    {
+      "id": "15e3762a.d4b97a",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherRain",
+      "group": "c7b25467.d3ce58",
+      "order": 4,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Rain",
+      "label": "Intensity",
+      "format": "{{msg.data.rain}}",
+      "min": "0",
+      "max": "100",
+      "colors": [
+        "#00b500",
+        "#e6e600",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1390,
+      "y": 380,
+      "wires": []
+    },
+    {
+      "id": "a0bc2ede.e0cee",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherLight",
+      "group": "c7b25467.d3ce58",
+      "order": 5,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Light",
+      "label": "Intensity",
+      "format": "{{msg.data.light}}",
+      "min": "0",
+      "max": "4000",
+      "colors": [
+        "#00b500",
+        "#e6e600",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1390,
+      "y": 460,
+      "wires": []
+    },
+    {
+      "id": "8145d068.b45e6",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "WeatherUV",
+      "group": "c7b25467.d3ce58",
+      "order": 6,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "UV",
+      "label": "UV",
+      "format": "{{msg.data.uv}}",
+      "min": "0",
+      "max": "10",
+      "colors": [
+        "#00b500",
+        "#e6e600",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1390,
+      "y": 540,
+      "wires": []
+    },
+    {
+      "id": "99401971.daae18",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "c7b25467.d3ce58",
+      "order": 7,
+      "width": "6",
+      "height": "2",
+      "name": "WeatherLastUpdated",
+      "label": "Last Updated",
+      "format": "{{msg.data.timestamp}}",
+      "layout": "col-center",
+      "x": 1420,
+      "y": 620,
+      "wires": []
+    },
+    {
+      "id": "2eba6c6e.509834",
+      "type": "ui_toast",
+      "z": "fae84d4d.b0c77",
+      "position": "top right",
+      "displayTime": "3",
+      "highlight": "yellow",
+      "outputs": 0,
+      "ok": "OK",
+      "cancel": "",
+      "topic": "",
+      "name": "Alert",
+      "x": 510,
+      "y": 500,
+      "wires": []
+    },
+    {
+      "id": "a60f89ff.958df8",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "PlantTemperature",
+      "group": "5af08869.5aada8",
+      "order": 1,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Temperature",
+      "label": "ºC",
+      "format": "{{msg.data.temperature}}",
+      "min": "-10",
+      "max": "50",
+      "colors": [
+        "#00b500",
+        "#e6e600",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1410,
+      "y": 740,
+      "wires": []
+    },
+    {
+      "id": "6746016d.5c895",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "PlantHumidity",
+      "group": "5af08869.5aada8",
+      "order": 2,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Humidity",
+      "label": "%",
+      "format": "{{msg.data.humidity}}",
+      "min": "0",
+      "max": "100",
+      "colors": [
+        "#ffd479",
+        "#009051",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1400,
+      "y": 820,
+      "wires": []
+    },
+    {
+      "id": "acc14adb.648498",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "PlantSoilMoisture",
+      "group": "5af08869.5aada8",
+      "order": 3,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Soil Moisture",
+      "label": "%",
+      "format": "{{msg.data.sm}}",
+      "min": "0",
+      "max": "100",
+      "colors": [
+        "#ff9300",
+        "#009051",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1410,
+      "y": 900,
+      "wires": []
+    },
+    {
+      "id": "9c21585.80b59a8",
+      "type": "ui_gauge",
+      "z": "fae84d4d.b0c77",
+      "name": "PlantLight",
+      "group": "5af08869.5aada8",
+      "order": 4,
+      "width": "3",
+      "height": "2",
+      "gtype": "gage",
+      "title": "Light",
+      "label": "Intensity",
+      "format": "{{msg.data.light}}",
+      "min": "0",
+      "max": "400",
+      "colors": [
+        "#008f00",
+        "#008f00",
+        "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 1380,
+      "y": 980,
+      "wires": []
+    },
+    {
+      "id": "9cfa15a.8f895e8",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "5af08869.5aada8",
+      "order": 5,
+      "width": "4",
+      "height": "2",
+      "name": "PlantLastUpdated",
+      "label": "Last Updated",
+      "format": "{{msg.data.timestamp}}",
+      "layout": "col-center",
+      "x": 1410,
+      "y": 1060,
+      "wires": []
+    },
+    {
+      "id": "e119e1c2.47905",
+      "type": "template",
+      "z": "fae84d4d.b0c77",
+      "name": "css",
+      "field": "style",
+      "fieldType": "msg",
+      "format": "html",
+      "syntax": "mustache",
+      "template": "table {\n    color: #333;\n    font-family: Helvetica, Arial, sans-serif;\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n}\ntd, th {\n    border: 1px solid transparent;\n    /* No more visible border */\n    height: 30px;\n    transition: all 0.3s;\n    /* Simple transition for hover effect */\n}\nth {\n    background: #DFDFDF;\n    /* Darken header a bit */\n    font-weight: bold;\n}\ntd {\n    background: #FAFAFA;\n    text-align: center;\n}\n\n/* Cells in even rows (2,4,6...) are one color */\n\ntr:nth-child(even) td {\n    background: #F1F1F1;\n}\n\n/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */\n\ntr:nth-child(odd) td {\n    background: #FEFEFE;\n}\ntr td:hover {\n    background: #666;\n    color: #FFF;\n}\n\n/* Hover cell effect! */",
+      "x": 590,
+      "y": 860,
+      "wires": [
+        [
+          "420c8356.7362ac"
+        ]
+      ]
+    },
+    {
+      "id": "420c8356.7362ac",
+      "type": "ui_template",
+      "z": "fae84d4d.b0c77",
+      "group": "94e80235.637d1",
+      "name": "Plant Alerts",
+      "order": 0,
+      "width": "24",
+      "height": "6",
+      "format": "<style>\n    {{msg.style}}\n</style>\n\n<table>\n  <tr ng-repeat=\"obj in msg.payload\">\n    <td>{{ obj.device }}</td>\n    <td>{{ obj.message }}</td>\n  </tr>\n</table>",
+      "storeOutMessages": true,
+      "fwdInMessages": true,
+      "templateScope": "local",
+      "x": 810,
+      "y": 860,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "e304c280.40de5",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "processAlerts",
+      "func": "const MAX_ALERTS = 5;\n\nfunction processAlerts(data,type) {\n    var messageData = flow.get(\"alerts_\"+type)||[];\n    if (data.length>MAX_ALERTS) {\n        messageData = data.slice(0,MAX_ALERTS);\n    } else {\n        if ((data.length+messageData.length)>MAX_ALERTS) {\n            messageData = messageData.slice(0, MAX_ALERTS - data.length);\n            for (const val in data) {\n                messageData.unshift(val);\n            }\n        }\n    }\n    flow.set(\"alerts_\"+type,messageData);\n    return messageData;\n}\n\nvar msgWEATHERALERT;\nvar msgTOTAL;\nvar msgPLANTALERT;\nif (msg.WEATHER) {\n    msgWEATHERALERT = {};\n    msgWEATHERALERT.payload = processAlerts(msg.WEATHER,'WEATHER'); \n    \n}\nif (msg.PLANT) {\n    msgPLANTALERT = {};\n    msgPLANTALERT.payload = processAlerts(msg.PLANT,'PLANT'); \n}\n\nif (msg.payload) {\n    msg.payload = processAlerts(msg.payload,'GLOBAL');\n}\n\nreturn [msgPLANTALERT,msgWEATHERALERT,msg];",
+      "outputs": 3,
+      "noerr": 0,
+      "x": 280,
+      "y": 920,
+      "wires": [
+        [
+          "e119e1c2.47905"
+        ],
+        [
+          "aee08310.a88b"
+        ],
+        [
+          "66b3f7e7.c7b628"
+        ]
+      ]
+    },
+    {
+      "id": "1e3a957f.46cd8b",
+      "type": "ui_template",
+      "z": "fae84d4d.b0c77",
+      "group": "93ee4c0.96c50b8",
+      "name": "WeatherAlerts",
+      "order": 0,
+      "width": "24",
+      "height": "6",
+      "format": "<style>\n    {{msg.style}}\n</style>\n\n<table>\n  <tr ng-repeat=\"obj in msg.payload\">\n    <td>{{ obj.device }}</td>\n    <td>{{ obj.message }}</td>\n    <td>{{ obj.timestamp }}</td>\n  </tr>\n</table>",
+      "storeOutMessages": true,
+      "fwdInMessages": true,
+      "templateScope": "local",
+      "x": 820,
+      "y": 920,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "f66d7e5.a29628",
+      "type": "ui_template",
+      "z": "fae84d4d.b0c77",
+      "group": "e05b669b.eb93e8",
+      "name": "Alerts",
+      "order": 0,
+      "width": "24",
+      "height": "6",
+      "format": "<style>\n    {{msg.style}}\n</style>\n\n<table>\n  <tr ng-repeat=\"obj in msg.payload\">\n    <td>{{ obj.device }}</td>\n    <td>{{ obj.message }}</td>\n    <td>{{ obj.timestamp }}</td>\n  </tr>\n</table>",
+      "storeOutMessages": true,
+      "fwdInMessages": true,
+      "templateScope": "local",
+      "x": 790,
+      "y": 980,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "db23a795.24b798",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "8581afbf.aa29a",
+      "order": 0,
+      "width": "4",
+      "height": "2",
+      "name": "",
+      "label": "Temperature",
+      "format": "{{msg.data.temperature}}",
+      "layout": "col-center",
+      "x": 1390,
+      "y": 700,
+      "wires": []
+    },
+    {
+      "id": "8eade4b6.434fb8",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "8581afbf.aa29a",
+      "order": 0,
+      "width": "4",
+      "height": "2",
+      "name": "",
+      "label": "Humidity",
+      "format": "{{msg.data.humidity}}",
+      "layout": "col-center",
+      "x": 1380,
+      "y": 780,
+      "wires": []
+    },
+    {
+      "id": "f33af74d.760218",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "8581afbf.aa29a",
+      "order": 0,
+      "width": "4",
+      "height": "2",
+      "name": "",
+      "label": "Soil Moisture",
+      "format": "{{msg.data.sm}}",
+      "layout": "col-center",
+      "x": 1390,
+      "y": 860,
+      "wires": []
+    },
+    {
+      "id": "5e2fd048.13cac",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "8581afbf.aa29a",
+      "order": 0,
+      "width": "4",
+      "height": "2",
+      "name": "",
+      "label": "Light",
+      "format": "{{msg.data.light}}",
+      "layout": "col-center",
+      "x": 1370,
+      "y": 940,
+      "wires": []
+    },
+    {
+      "id": "67ac4d96.0acbb4",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "ac0138d0.74d198",
+      "order": 0,
+      "width": "3",
+      "height": "2",
+      "name": "",
+      "label": "Temperature",
+      "format": "{{msg.data.temperature}}",
+      "layout": "col-center",
+      "x": 1390,
+      "y": 100,
+      "wires": []
+    },
+    {
+      "id": "85a64b78.c5ee98",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "ac0138d0.74d198",
+      "order": 0,
+      "width": "3",
+      "height": "2",
+      "name": "",
+      "label": "Humidity",
+      "format": "{{msg.data.humidity}}",
+      "layout": "col-center",
+      "x": 1380,
+      "y": 180,
+      "wires": []
+    },
+    {
+      "id": "a4557a8d.19c508",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "ac0138d0.74d198",
+      "order": 0,
+      "width": "3",
+      "height": "2",
+      "name": "",
+      "label": "Pressure",
+      "format": "{{msg.data.pressure}}",
+      "layout": "col-center",
+      "x": 1380,
+      "y": 260,
+      "wires": []
+    },
+    {
+      "id": "ed3805f.326f6f8",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "ac0138d0.74d198",
+      "order": 0,
+      "width": "3",
+      "height": "2",
+      "name": "",
+      "label": "Rain",
+      "format": "{{msg.data.rain}}",
+      "layout": "col-center",
+      "x": 1370,
+      "y": 340,
+      "wires": []
+    },
+    {
+      "id": "3a10d721.f2e088",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "ac0138d0.74d198",
+      "order": 0,
+      "width": "3",
+      "height": "2",
+      "name": "",
+      "label": "Light",
+      "format": "{{msg.data.light}}",
+      "layout": "col-center",
+      "x": 1370,
+      "y": 420,
+      "wires": []
+    },
+    {
+      "id": "23970a2f.84f766",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "ac0138d0.74d198",
+      "order": 0,
+      "width": "3",
+      "height": "2",
+      "name": "",
+      "label": "UV",
+      "format": "{{msg.data.uv}}",
+      "layout": "col-center",
+      "x": 1370,
+      "y": 500,
+      "wires": []
+    },
+    {
+      "id": "ee9be2f.cdf612",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "ac0138d0.74d198",
+      "order": 0,
+      "width": "6",
+      "height": "2",
+      "name": "",
+      "label": "Last Value",
+      "format": "{{msg.data.timestamp}}",
+      "layout": "col-center",
+      "x": 1390,
+      "y": 580,
+      "wires": []
+    },
+    {
+      "id": "6869d28a.c6768c",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "8581afbf.aa29a",
+      "order": 0,
+      "width": "4",
+      "height": "2",
+      "name": "",
+      "label": "Last Value",
+      "format": "{{msg.data.timestamp}}",
+      "layout": "col-center",
+      "x": 1390,
+      "y": 1020,
+      "wires": []
+    },
+    {
+      "id": "87c5c5c3.036ea8",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "4923a584.f7c9ac",
+      "order": 4,
+      "width": "4",
+      "height": "2",
+      "name": "WeatherStatusLastUpdated",
+      "label": "Last Updated",
+      "format": "{{msg.data.timestamp}}",
+      "layout": "col-center",
+      "x": 560,
+      "y": 1120,
+      "wires": []
+    },
+    {
+      "id": "5d75dd5.f0a3724",
+      "type": "ui_text",
+      "z": "fae84d4d.b0c77",
+      "group": "4923a584.f7c9ac",
+      "order": 2,
+      "width": "4",
+      "height": "2",
+      "name": "PlantStatusLastUpdated",
+      "label": "Last Updated",
+      "format": "{{msg.data.timestamp}}",
+      "layout": "col-center",
+      "x": 550,
+      "y": 1280,
+      "wires": []
+    },
+    {
+      "id": "abf0c10b.aa362",
+      "type": "inject",
+      "z": "a2174fd2.516a1",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": true,
+      "onceDelay": "10",
+      "x": 110,
+      "y": 140,
+      "wires": [
+        [
+          "eaf7610f.e3f5f"
+        ]
+      ]
+    },
+    {
+      "id": "18203e74.da5b82",
+      "type": "comment",
+      "z": "a2174fd2.516a1",
+      "name": "Obtain Summary Data",
+      "info": "",
+      "x": 260,
+      "y": 80,
+      "wires": []
+    },
+    {
+      "id": "c72765a1.11b458",
+      "type": "template",
+      "z": "a2174fd2.516a1",
+      "name": "Summary Query Building",
+      "field": "payload",
+      "fieldType": "msg",
+      "format": "handlebars",
+      "syntax": "mustache",
+      "template": "select device,device_type, \n\tdata::json->'uv'::text as uv,\n\tdata::json->'light'::text as light,\n\tdata::json->'sm'::text as sm,\n\tdata::json->'rain'::text as rain,\n\tdata::json->'pressure'::text as pressure,\n\tdata::json->'humidity'::text as humidity,\n\tdata::json->>'temperature'::text as temperature,\n\tto_char(to_timestamp(gw_time/ 1000),'DD/MM/YYYY') as data_time\nfrom telemetry\n\twhere gw_time>$timestamp",
+      "output": "str",
+      "x": 370,
+      "y": 140,
+      "wires": [
+        [
+          "6564520b.42b23c"
+        ]
+      ]
+    },
+    {
+      "id": "eaf7610f.e3f5f",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Prepare summary",
+      "func": "msg.queryParameters = msg.queryParameters || {};\n\nmsg.queryParameters.timestamp = new Date(new Date() - 7*24*60*60*1000).getTime();\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 210,
+      "y": 240,
+      "wires": [
+        [
+          "c72765a1.11b458"
+        ]
+      ]
+    },
+    {
+      "id": "6564520b.42b23c",
+      "type": "postgres",
+      "z": "a2174fd2.516a1",
+      "postgresdb": "a1877da4.03796",
+      "name": "SummaryQuery",
+      "output": true,
+      "outputs": 1,
+      "x": 480,
+      "y": 260,
+      "wires": [
+        [
+          "311811fa.401eee"
+        ]
+      ]
+    },
+    {
+      "id": "311811fa.401eee",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Process Summary",
+      "func": "var groupBy = function(input, key) {\n    var result = {};\n    for (const val of input) {\n        mapElement = result[val[key]];\n        if (mapElement) {\n            mapElement.push(val);\n        } else {\n            mapElement = [];\n            mapElement.push(val);\n            result[val[key]] = mapElement;\n        } \n    }\n    return result;\n};\n\n\nfunction processValues(deviceType,input) {\n    var result = {};\n    \n    for (const val of Object.getOwnPropertyNames(input)) {\n        let nElements = input[val].length;\n        for (const value of input[val]) {\n        mapElement = result[val];\n        if ('PLANT' == deviceType) {\n        if (!mapElement) {\n            mapElement = {};\n            mapElement.temperature = parseFloat(value.temperature)/nElements;\n            mapElement.humidity = parseFloat(value.humidity)/nElements;\n            mapElement.light = parseFloat(value.light)/nElements;\n            mapElement.sm = parseFloat(value.sm)/nElements;\n            result[val] = mapElement;\n        } else {\n            mapElement.temperature += parseFloat(value.temperature)/nElements;\n            mapElement.humidity += parseFloat(value.humidity)/nElements;\n            mapElement.light += parseFloat(value.light)/nElements;\n            mapElement.sm += parseFloat(value.sm)/nElements;\n        }\n        }\n        else if ('WEATHER' == deviceType) {\n        if (!mapElement) {\n            mapElement = {};\n            mapElement.temperature = parseFloat(value.temperature)/nElements;\n            mapElement.humidity = parseFloat(value.humidity)/nElements;\n            mapElement.light = parseFloat(value.light)/nElements;\n             mapElement.uv = parseFloat(value.uv)/nElements;\n             mapElement.pressure = parseFloat(value.pressure)/nElements;\n             mapElement.rain = parseFloat(value.rain)/nElements;\n            result[val] = mapElement;\n        } else {\n            mapElement.temperature += parseFloat(value.temperature)/nElements;\n            mapElement.humidity += parseFloat(value.humidity)/nElements;\n            mapElement.light += parseFloat(value.light)/nElements;\n            mapElement.light = parseFloat(value.light)/nElements;\n             mapElement.uv += parseFloat(value.uv)/nElements;\n             mapElement.pressure += parseFloat(value.pressure)/nElements;\n             mapElement.rain += parseFloat(value.rain)/nElements;\n        }\n        }\n        }\n    }\n    \n    return result;\n};\n\nvar data = msg.payload;\n\nvar content = groupBy(data,'device_type');\n\nfor (const deviceType of Object.getOwnPropertyNames(content)) {\n    node.warn(deviceType);\n    content[deviceType] = groupBy(content[deviceType],'data_time');\n    msg[deviceType] = processValues(deviceType,content[deviceType]);\n}\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 670,
+      "y": 140,
+      "wires": [
+        [
+          "fb8f61bd.fe098"
+        ]
+      ]
+    },
+    {
+      "id": "fb8f61bd.fe098",
+      "type": "link out",
+      "z": "a2174fd2.516a1",
+      "name": "summaryData",
+      "links": [
+        "8ad5ed5f.3654c"
+      ],
+      "x": 835,
+      "y": 40,
+      "wires": []
+    },
+    {
+      "id": "8ad5ed5f.3654c",
+      "type": "link in",
+      "z": "fae84d4d.b0c77",
+      "name": "",
+      "links": [
+        "fb8f61bd.fe098"
+      ],
+      "x": 635,
+      "y": 80,
+      "wires": [
+        [
+          "e1dee27c.7f8ce"
+        ]
+      ]
+    },
+    {
+      "id": "4906ae21.5deec",
+      "type": "debug",
+      "z": "fae84d4d.b0c77",
+      "name": "ALERTS",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "true",
+      "targetType": "full",
+      "x": 580,
+      "y": 700,
+      "wires": []
+    },
+    {
+      "id": "e1dee27c.7f8ce",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "Prepare Summaries",
+      "func": "function process(input) {\n    var result = {\n        series:[],\n        data:[],\n        labels:[]\n    };\n    //Extracting labels\n    for (const val of Object.getOwnPropertyNames(input)) {\n        result.labels.push(val);\n\n        //Extracting name series\n        for (const key of Object.getOwnPropertyNames(input[val])) {\n            var pos = result.series.indexOf(key);\n            var values = [];\n            if (pos<0) {\n                result.series.push(key);\n                result.data.push(values);\n            } else {\n                values = result.data[pos];\n            }\n            values.push(input[val][key]);\n        }\n    }\n    node.warn(result);\n    return [result];\n}\n\nvar msgTest = {};\n\nmsgTest.payload = [{\n    \"series\": [\"X\", \"Y\", \"A\"],\n    \"data\": [ [5.54,6], [3,8] ,[1,1]],\n    \"labels\": [ \"Jan\", \"Feb\", \"Mar\"]\n}];\n\nvar msgPLANT = {}\nif (msg.PLANT) {\nmsgPLANT.payload = process(msg.PLANT);\n}\nvar msgWEATHER = {}\nif (msg.WEATHER) {\nmsgWEATHER.payload = process(msg.WEATHER);\n}\nnode.warn(msgWEATHER);\nreturn [msgWEATHER,msgPLANT];",
+      "outputs": 2,
+      "noerr": 0,
+      "x": 790,
+      "y": 80,
+      "wires": [
+        [
+          "5d510c80.98ef14"
+        ],
+        [
+          "c60cb548.99cb28"
+        ]
+      ]
+    },
+    {
+      "id": "f20a3d7d.fd595",
+      "type": "inject",
+      "z": "a2174fd2.516a1",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "300",
+      "crontab": "",
+      "once": true,
+      "onceDelay": "30",
+      "x": 110,
+      "y": 360,
+      "wires": [
+        [
+          "9b94700b.62efc"
+        ]
+      ]
+    },
+    {
+      "id": "9b94700b.62efc",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Prepare Telemetry",
+      "func": "msg.queryParameters = msg.queryParameters || {};\n\nvar timestamp = flow.get(\"telemetryTimestamp\");\n\n//Last two days\nif (!timestamp) {\n   timestamp = new Date(new Date() - 2*24*60*60*1000).getTime()     \n}\nflow.set(\"telemetryTimestamp\",new Date().getTime()); \n\nmsg.queryParameters.timestamp = timestamp;\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 190,
+      "y": 440,
+      "wires": [
+        [
+          "70886400.52e5bc"
+        ]
+      ]
+    },
+    {
+      "id": "70886400.52e5bc",
+      "type": "template",
+      "z": "a2174fd2.516a1",
+      "name": "Telemetry Query Building",
+      "field": "payload",
+      "fieldType": "msg",
+      "format": "handlebars",
+      "syntax": "mustache",
+      "template": "select device,device_type, \n\tdata::json->>'uv'::text as uv,\n\tdata::json->>'light'::text as light,\n\tdata::json->>'sm'::text as sm,\n\tdata::json->>'rain'::text as rain,\n\tdata::json->>'pressure'::text as pressure,\n\tdata::json->>'humidity'::text as humidity,\n\tdata::json->>'temperature'::text as temperature,\n\tgw_time as data_time\nfrom telemetry\n\twhere gw_time>$timestamp\n\torder by gw_time desc\n\tlimit 100",
+      "output": "str",
+      "x": 370,
+      "y": 500,
+      "wires": [
+        [
+          "8371e52e.2bdf58"
+        ]
+      ]
+    },
+    {
+      "id": "8371e52e.2bdf58",
+      "type": "postgres",
+      "z": "a2174fd2.516a1",
+      "postgresdb": "a1877da4.03796",
+      "name": "TelemetryQuery",
+      "output": true,
+      "outputs": 1,
+      "x": 520,
+      "y": 420,
+      "wires": [
+        [
+          "a2c34c.ab2b8cb8"
+        ]
+      ]
+    },
+    {
+      "id": "a2c34c.ab2b8cb8",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Process Telemetry",
+      "func": "var groupBy = function(input, key) {\n    var result = {};\n    for (const val of input) {\n        mapElement = result[val[key]];\n        if (mapElement) {\n            mapElement.push(val);\n        } else {\n            mapElement = [];\n            mapElement.push(val);\n            result[val[key]] = mapElement;\n        } \n    }\n    return result;\n};\n\n\nfunction processValues(deviceType,input) {\n    var result = [];\n    for (const value of input) {\n        var mapElement = {};\n        if ('PLANT' == deviceType) {\n            mapElement = {};\n            mapElement.temperature = parseFloat(value.temperature);\n            mapElement.humidity = parseFloat(value.humidity);\n            mapElement.light = parseFloat(value.light);\n            mapElement.sm = parseFloat(value.sm);\n            mapElement.data_time = parseInt(value.data_time);\n        }\n        else if ('WEATHER' == deviceType) {\n            mapElement = {};\n            mapElement.temperature = parseFloat(value.temperature);\n            mapElement.humidity = parseFloat(value.humidity);\n            mapElement.light = parseFloat(value.light);\n             mapElement.uv = parseFloat(value.uv);\n             mapElement.pressure = parseFloat(value.pressure);\n             mapElement.rain = parseFloat(value.rain);\n             mapElement.data_time = parseInt(value.data_time);\n        } \n        result.push(mapElement);\n    }\n    return result;\n};\n\nfunction getLast(input) {\n    var result;\n    if (input && Array.isArray(input) && input.length>0) {\n      result = input[0];  \n    }\n    return result;\n}\n\nvar data = msg.payload;\n\nvar content = groupBy(data,'device_type');\nfor (const deviceType of Object.getOwnPropertyNames(content)) {\n    msg[deviceType] = processValues(deviceType,content[deviceType]);\n    msg['LAST_'+deviceType] = getLast(msg[deviceType]);\n}\n\nvar msgTest = {};\nmsgTest.payload = \n[{\n\"series\": [\"A\", \"B\", \"C\"],\n\"topic\": [\"TA\", \"TB\", \"TC\"],\n\"data\": [\n    [{ \"x\": 1504029632890, \"y\": 5 },\n     { \"x\": 1504029636001, \"y\": 4 },\n     { \"x\": 1504029638656, \"y\": 2 }\n    ],\n    [{ \"x\": 1504029633514, \"y\": 6 },\n     { \"x\": 1504029636622, \"y\": 7 },\n     { \"x\": 1504029639539, \"y\": 6 }\n    ],\n    [{ \"x\": 1504029634400, \"y\": 7 },\n     { \"x\": 1504029637959, \"y\": 7 },\n     { \"x\": 1504029640317, \"y\": 7 }\n    ]\n],\n\"labels\": [\"Az\",\"Bz\",\"Cz\"]\n}];\n\n\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 710,
+      "y": 320,
+      "wires": [
+        [
+          "37e8cb19.91e284"
+        ]
+      ]
+    },
+    {
+      "id": "37e8cb19.91e284",
+      "type": "link out",
+      "z": "a2174fd2.516a1",
+      "name": "telemetryData",
+      "links": [
+        "26115e6a.bf3262"
+      ],
+      "x": 980,
+      "y": 320,
+      "wires": []
+    },
+    {
+      "id": "df90e796.a43168",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "Prepare Telemetry",
+      "func": "function processTimeSerie(data, timeLabel) {\n    var result = {\n        series:[],\n        data:[],\n        topics:[],\n        labels:[]\n    };\n    //Extracting labels\n    for (const input of data) {\n    for (const val of Object.getOwnPropertyNames(input)) {\n        if (timeLabel !== val) {\n        var pos = result.labels.indexOf(val);\n        if (pos<0) {\n            result.labels.push(val);\n            result.series.push(val);\n            result.topics.push(val);\n            result.data.push([]);\n            pos = result.labels.length-1;\n        }\n        value= {\n            x : input[timeLabel],\n            y : input[val]\n        };\n        result.data[pos].push(value)\n        }\n        //build element and add\n    }\n    }\n    return [result];\n}\n\nvar msgTest = {};\nmsgTest.payload = \n[{\n\"series\": [\"A\", \"B\", \"C\"],\n\"topic\": [\"TA\", \"TB\", \"TC\"],\n\"data\": [\n    [{ \"x\": 1504029632890, \"y\": 5 },\n     { \"x\": 1504029636001, \"y\": 4 },\n     { \"x\": 1504029638656, \"y\": 2 }\n    ],\n    [{ \"x\": 1504029633514, \"y\": 6 },\n     { \"x\": 1504029636622, \"y\": 7 },\n     { \"x\": 1504029639539, \"y\": 6 }\n    ],\n    [{ \"x\": 1504029634400, \"y\": 7 },\n     { \"x\": 1504029637959, \"y\": 7 },\n     { \"x\": 1504029640317, \"y\": 7 }\n    ]\n],\n\"labels\": [\"Az\",\"Bz\",\"Cz\"]\n}];\n\n\nvar msgPLANT = {}\nif (msg.PLANT) {\nmsgPLANT.payload = processTimeSerie(msg.PLANT, \"data_time\");\n}\nvar msgWEATHER = {}\nif (msg.WEATHER) {\nmsgWEATHER.payload = processTimeSerie(msg.WEATHER, \"data_time\");\n}\nvar msgLAST_PLANT;\nif (msg.LAST_PLANT) {\n    msgLAST_PLANT = {};\nmsgLAST_PLANT.data = msg.LAST_PLANT;\n}\nvar msgLAST_WEATHER;\nif (msg.LAST_WEATHER) {\n    msgLAST_WEATHER = {};\nmsgLAST_WEATHER.data = msg.LAST_WEATHER;\n}\n\nreturn [msgWEATHER,msgPLANT,msgLAST_WEATHER, msgLAST_PLANT];",
+      "outputs": 4,
+      "noerr": 0,
+      "x": 810,
+      "y": 200,
+      "wires": [
+        [
+          "c3f42e74.43f94"
+        ],
+        [
+          "3d6e5211.6b06ee"
+        ],
+        [
+          "a08b1bbd.17dcb8"
+        ],
+        [
+          "72b3a20f.bc6c4c"
+        ]
+      ]
+    },
+    {
+      "id": "26115e6a.bf3262",
+      "type": "link in",
+      "z": "fae84d4d.b0c77",
+      "name": "",
+      "links": [
+        "37e8cb19.91e284"
+      ],
+      "x": 615,
+      "y": 200,
+      "wires": [
+        [
+          "df90e796.a43168"
+        ]
+      ]
+    },
+    {
+      "id": "a08b1bbd.17dcb8",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "processLastWeather",
+      "func": "if (msg.data && msg.data.data_time) {\n    msg.data.timestamp = new Date(msg.data.data_time).toLocaleString();\n}\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1120,
+      "y": 340,
+      "wires": [
+        [
+          "67ac4d96.0acbb4",
+          "85a64b78.c5ee98",
+          "a4557a8d.19c508",
+          "ed3805f.326f6f8",
+          "3a10d721.f2e088",
+          "23970a2f.84f766",
+          "ee9be2f.cdf612",
+          "ac15a465.b57c68",
+          "db09c26a.a3a0f",
+          "da1ffa86.904028",
+          "15e3762a.d4b97a",
+          "a0bc2ede.e0cee",
+          "8145d068.b45e6",
+          "99401971.daae18"
+        ]
+      ]
+    },
+    {
+      "id": "72b3a20f.bc6c4c",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "processLastPlant",
+      "func": "if (msg.data && msg.data.data_time) {\n    msg.data.timestamp = new Date(msg.data.data_time).toLocaleString();\n}\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1090,
+      "y": 860,
+      "wires": [
+        [
+          "db23a795.24b798",
+          "a60f89ff.958df8",
+          "8eade4b6.434fb8",
+          "6746016d.5c895",
+          "f33af74d.760218",
+          "acc14adb.648498",
+          "5e2fd048.13cac",
+          "9c21585.80b59a8",
+          "6869d28a.c6768c",
+          "9cfa15a.8f895e8"
+        ]
+      ]
+    },
+    {
+      "id": "c3b50e19.59c0e",
+      "type": "comment",
+      "z": "a2174fd2.516a1",
+      "name": "Obtain Telemetry",
+      "info": "",
+      "x": 260,
+      "y": 300,
+      "wires": []
+    },
+    {
+      "id": "dd7bea7c.2c7b98",
+      "type": "inject",
+      "z": "a2174fd2.516a1",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "180",
+      "crontab": "",
+      "once": true,
+      "onceDelay": "20",
+      "x": 90,
+      "y": 620,
+      "wires": [
+        [
+          "250cc0de.7c2df"
+        ]
+      ]
+    },
+    {
+      "id": "250cc0de.7c2df",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Prepare Alert",
+      "func": "msg.queryParameters = msg.queryParameters || {};\n\nvar timestamp = flow.get(\"alertTimestamp\");\n\n//Last two days\nif (timestamp) {\n   timestamp = new Date(new Date() - 2*24*60*60*1000).getTime()     \n}\nflow.set(\"alertTimestamp\",new Date().getTime()); \n\nmsg.queryParameters.timestamp = timestamp;\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 190,
+      "y": 680,
+      "wires": [
+        [
+          "99b50cc3.eaff9"
+        ]
+      ]
+    },
+    {
+      "id": "99b50cc3.eaff9",
+      "type": "template",
+      "z": "a2174fd2.516a1",
+      "name": "Alerts Query Building",
+      "field": "payload",
+      "fieldType": "msg",
+      "format": "handlebars",
+      "syntax": "mustache",
+      "template": "select edge_time as data_time,device_type,device,message from alert\nwhere edge_time > $timestamp\norder by edge_time desc\nlimit 20\n",
+      "output": "str",
+      "x": 400,
+      "y": 760,
+      "wires": [
+        [
+          "566badd6.4e13b4"
+        ]
+      ]
+    },
+    {
+      "id": "566badd6.4e13b4",
+      "type": "postgres",
+      "z": "a2174fd2.516a1",
+      "postgresdb": "a1877da4.03796",
+      "name": "AlertQuery",
+      "output": true,
+      "outputs": 1,
+      "x": 510,
+      "y": 640,
+      "wires": [
+        [
+          "41a3514e.9f075"
+        ]
+      ]
+    },
+    {
+      "id": "f322d82.caa4a28",
+      "type": "comment",
+      "z": "a2174fd2.516a1",
+      "name": "Obtain Alerts",
+      "info": "",
+      "x": 230,
+      "y": 560,
+      "wires": []
+    },
+    {
+      "id": "41a3514e.9f075",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Process Alerts",
+      "func": "var groupBy = function(input, key) {\n    var result = {};\n    for (const val of input) {\n        mapElement = result[val[key]];\n        if (mapElement) {\n            mapElement.push(val);\n        } else {\n            mapElement = [];\n            mapElement.push(val);\n            result[val[key]] = mapElement;\n        } \n    }\n    return result;\n};\n\n\nfunction processData(data) {\n    var result = data;\n    for (const val of data) \n    {\n        if (val['data_time']) {\n            val.timestamp = new Date(parseInt(val['data_time'])).toLocaleString();\n        }\n    }\n    return result;\n};\n\nfunction getLast(input) {\n    var result;\n    if (input && Array.isArray(input) && input.length>0) {\n      result = input[0];  \n    }\n    return result;\n}\n\nvar data = processData(msg.payload);\nmsg.payload = data;\nvar content = groupBy(data,'device_type');\nfor (const deviceType of Object.getOwnPropertyNames(content)) {\n    msg[deviceType] = content[deviceType];\n}\n\nvar msgTest = {};\nmsgTest.payload = \n[{\n\"series\": [\"A\", \"B\", \"C\"],\n\"topic\": [\"TA\", \"TB\", \"TC\"],\n\"data\": [\n    [{ \"x\": 1504029632890, \"y\": 5 },\n     { \"x\": 1504029636001, \"y\": 4 },\n     { \"x\": 1504029638656, \"y\": 2 }\n    ],\n    [{ \"x\": 1504029633514, \"y\": 6 },\n     { \"x\": 1504029636622, \"y\": 7 },\n     { \"x\": 1504029639539, \"y\": 6 }\n    ],\n    [{ \"x\": 1504029634400, \"y\": 7 },\n     { \"x\": 1504029637959, \"y\": 7 },\n     { \"x\": 1504029640317, \"y\": 7 }\n    ]\n],\n\"labels\": [\"Az\",\"Bz\",\"Cz\"]\n}];\n\n\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 780,
+      "y": 640,
+      "wires": [
+        [
+          "25e7d1be.cb275e"
+        ]
+      ]
+    },
+    {
+      "id": "25e7d1be.cb275e",
+      "type": "link out",
+      "z": "a2174fd2.516a1",
+      "name": "Alerts",
+      "links": [
+        "2ad38576.485efa"
+      ],
+      "x": 980,
+      "y": 640,
+      "wires": []
+    },
+    {
+      "id": "2ad38576.485efa",
+      "type": "link in",
+      "z": "fae84d4d.b0c77",
+      "name": "alerts",
+      "links": [
+        "25e7d1be.cb275e"
+      ],
+      "x": 75,
+      "y": 920,
+      "wires": [
+        [
+          "e304c280.40de5"
+        ]
+      ]
+    },
+    {
+      "id": "aee08310.a88b",
+      "type": "template",
+      "z": "fae84d4d.b0c77",
+      "name": "css",
+      "field": "style",
+      "fieldType": "msg",
+      "format": "html",
+      "syntax": "mustache",
+      "template": "table {\n    color: #333;\n    font-family: Helvetica, Arial, sans-serif;\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n}\ntd, th {\n    border: 1px solid transparent;\n    /* No more visible border */\n    height: 30px;\n    transition: all 0.3s;\n    /* Simple transition for hover effect */\n}\nth {\n    background: #DFDFDF;\n    /* Darken header a bit */\n    font-weight: bold;\n}\ntd {\n    background: #FAFAFA;\n    text-align: center;\n}\n\n/* Cells in even rows (2,4,6...) are one color */\n\ntr:nth-child(even) td {\n    background: #F1F1F1;\n}\n\n/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */\n\ntr:nth-child(odd) td {\n    background: #FEFEFE;\n}\ntr td:hover {\n    background: #666;\n    color: #FFF;\n}\n\n/* Hover cell effect! */",
+      "x": 590,
+      "y": 920,
+      "wires": [
+        [
+          "1e3a957f.46cd8b"
+        ]
+      ]
+    },
+    {
+      "id": "66b3f7e7.c7b628",
+      "type": "template",
+      "z": "fae84d4d.b0c77",
+      "name": "css",
+      "field": "style",
+      "fieldType": "msg",
+      "format": "html",
+      "syntax": "mustache",
+      "template": "table {\n    color: #333;\n    font-family: Helvetica, Arial, sans-serif;\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n}\ntd, th {\n    border: 1px solid transparent;\n    /* No more visible border */\n    height: 30px;\n    transition: all 0.3s;\n    /* Simple transition for hover effect */\n}\nth {\n    background: #DFDFDF;\n    /* Darken header a bit */\n    font-weight: bold;\n}\ntd {\n    background: #FAFAFA;\n    text-align: center;\n}\n\n/* Cells in even rows (2,4,6...) are one color */\n\ntr:nth-child(even) td {\n    background: #F1F1F1;\n}\n\n/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */\n\ntr:nth-child(odd) td {\n    background: #FEFEFE;\n}\ntr td:hover {\n    background: #666;\n    color: #FFF;\n}\n\n/* Hover cell effect! */",
+      "x": 590,
+      "y": 980,
+      "wires": [
+        [
+          "f66d7e5.a29628"
+        ]
+      ]
+    },
+    {
+      "id": "db5f5efa.b54c9",
+      "type": "comment",
+      "z": "a2174fd2.516a1",
+      "name": "Obtain Status",
+      "info": "",
+      "x": 230,
+      "y": 840,
+      "wires": []
+    },
+    {
+      "id": "d7c64dbe.b2f77",
+      "type": "inject",
+      "z": "a2174fd2.516a1",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "120",
+      "crontab": "",
+      "once": true,
+      "onceDelay": "40",
+      "x": 90,
+      "y": 880,
+      "wires": [
+        [
+          "956db433.2f8d98"
+        ]
+      ]
+    },
+    {
+      "id": "956db433.2f8d98",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Prepare Status",
+      "func": "msg.queryParameters = msg.queryParameters || {};\n\nvar timestamp = flow.get(\"statusTimestamp\");\n\n//Last two days\nif (timestamp) {\n   timestamp = new Date(new Date() - 2*24*60*60*1000).getTime()     \n}\nflow.set(\"statusTimestamp\",new Date().getTime()); \n\nmsg.queryParameters.timestamp = timestamp;\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 260,
+      "y": 920,
+      "wires": [
+        [
+          "4534b20f.f9a12c"
+        ]
+      ]
+    },
+    {
+      "id": "4534b20f.f9a12c",
+      "type": "template",
+      "z": "a2174fd2.516a1",
+      "name": "Status Query Building",
+      "field": "payload",
+      "fieldType": "msg",
+      "format": "handlebars",
+      "syntax": "mustache",
+      "template": "select\n    a.device, a.status,a.device_type, a.edge_time\nfrom\n    status a\n    inner join \n        (select device, max(id) as maxid from status \n        group by device) as b on\n        a.id = b.maxid",
+      "output": "str",
+      "x": 440,
+      "y": 980,
+      "wires": [
+        [
+          "5e45af1c.db3c8"
+        ]
+      ]
+    },
+    {
+      "id": "5e45af1c.db3c8",
+      "type": "postgres",
+      "z": "a2174fd2.516a1",
+      "postgresdb": "a1877da4.03796",
+      "name": "StatusQuery",
+      "output": true,
+      "outputs": 1,
+      "x": 650,
+      "y": 900,
+      "wires": [
+        [
+          "d2efe9bc.15b628"
+        ]
+      ]
+    },
+    {
+      "id": "29e679bb.51c066",
+      "type": "link out",
+      "z": "a2174fd2.516a1",
+      "name": "statusData",
+      "links": [
+        "ff9848f2.531098"
+      ],
+      "x": 975,
+      "y": 840,
+      "wires": []
+    },
+    {
+      "id": "ff9848f2.531098",
+      "type": "link in",
+      "z": "fae84d4d.b0c77",
+      "name": "",
+      "links": [
+        "29e679bb.51c066"
+      ],
+      "x": 135,
+      "y": 1180,
+      "wires": [
+        [
+          "cd6aa0a1.9e47e"
+        ]
+      ]
+    },
+    {
+      "id": "d24b396b.e8bc78",
+      "type": "inject",
+      "z": "fae84d4d.b0c77",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "60",
+      "crontab": "",
+      "once": true,
+      "onceDelay": 0.1,
+      "x": 110,
+      "y": 80,
+      "wires": [
+        [
+          "d9e22c2f.794da"
+        ]
+      ]
+    },
+    {
+      "id": "d9e22c2f.794da",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "Format Time Stamp",
+      "func": "if (msg.payload) {\n    msg.payload = new Date(msg.payload).toLocaleString();\n}\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 300,
+      "y": 80,
+      "wires": [
+        [
+          "929a3f87.dbfc9"
+        ]
+      ]
+    },
+    {
+      "id": "d2efe9bc.15b628",
+      "type": "function",
+      "z": "a2174fd2.516a1",
+      "name": "Process Status",
+      "func": "function processData(data) {\n    var result = data;\n    for (const val of data) \n    {\n        if (val['edge_time']) {\n            val.timestamp = new Date(parseInt(val['edge_time'])).toLocaleString();\n        }\n    }\n    return result;\n};\n\n\nif (msg.payload) {\nvar data = processData(msg.payload);\nmsg.payload = data;\n}\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 820,
+      "y": 840,
+      "wires": [
+        [
+          "29e679bb.51c066"
+        ]
+      ]
+    },
+    {
+      "id": "cd6aa0a1.9e47e",
+      "type": "function",
+      "z": "fae84d4d.b0c77",
+      "name": "processStatus",
+      "func": "const INACTITIY_PERIOD = 15*60*1000;\nvar data = msg.payload;\nvar msgWEATHER_STATUS, msgPLANT_STATUS;\n\nif (data) {\n    for (const val of data) {\n        val.color = 'lime';\n        if (!val.status || (new Date().getTime() - parseInt(val.edge_time)) > INACTITIY_PERIOD) {\n            val.color = 'red';\n        }\n        if ('PLANT' === val.device_type) {\n            msgPLANT_STATUS = {};\n            msgPLANT_STATUS.data = val;\n        } else {\n            msgWEATHER_STATUS = {};\n            msgWEATHER_STATUS.data = val;\n        }\n    }\n}\n\nreturn [msgWEATHER_STATUS, msgPLANT_STATUS];",
+      "outputs": 2,
+      "noerr": 0,
+      "x": 300,
+      "y": 1180,
+      "wires": [
+        [
+          "a8ec8d4f.97a77",
+          "87c5c5c3.036ea8"
+        ],
+        [
+          "9dd6ff49.75c3b",
+          "5d75dd5.f0a3724"
+        ]
+      ]
+    },
+    {
+      "id": "b4f62a3.1c7f1d8",
+      "type": "debug",
+      "z": "fae84d4d.b0c77",
+      "name": "",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "false",
+      "x": 270,
+      "y": 1060,
+      "wires": []
+    }
+  ]

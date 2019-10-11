@@ -1,0 +1,16 @@
+{
+  "name": "aaas-api-function-app",
+  "version": "1.0.0",
+  "description": "REST API for AAAS",
+  "private": true,
+  "author": "Ramón López Viana",
+  "scripts": {
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "azure-storage": "^2.10.3",
+    "uuid": "^3.3.2",
+    "azure-iothub": "^1.9.9"
+  },
+  "devDependencies": {}
+}
