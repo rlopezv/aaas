@@ -15,13 +15,11 @@ It supports two monitoring devices that will communicate through LoRa:
 
 - Plant Monitoring
 
-<![endif]-->
 
 ## **Prototyping board**
 
 The prototyping board selected for creating the field devices has been [TTGO ESP32 LORA 2.1.6](https://github.com/LilyGO/TTGO-LoRa32-V2.1). This board is a SX1276 chip based on ESP32 WIFI, namely LoRa remote modem, 868 MHz frequency that is the required in the EU context, high sensitivity, output power, high reliability and long transmission distance. It has been selected due to its low cost, around 25$ and the huge support offered by the internet community to solutions based on this board. Although this board has severe problems with the quality of the LoRa communication provided (up to 200m) and a problem with the charging circuit, but for the purposes of the prototype it’s enough.
 
- <![endif]-->
 
 ## **Sensors**
 
@@ -122,7 +120,6 @@ The LoRa platform used in the prototype is composed by the [RAK831](https://www.
 
 The LoRa platform has required of configuration and a little development. It has been required to configure the communication with the RAK 831 gateway hat. And once the Lora Server was able to communicate with the hat, an application has been created and configured in order to allow to communicate with the edge device.
 
-<![endif]-->
 
 First of all, it has been required to configure the LoRa gateway component to connect to the gateway hat. This has been done using the tool provided by loraserver.io. In this case, is only required to define the correspondent frequency plan, in this case EU-868.
 
