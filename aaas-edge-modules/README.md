@@ -87,9 +87,9 @@ source: "dps"
 
 ## Module/Container configuration
 
-Customized
+### Customized
 
-###Postgres
+### Postgres
 
     "postgres": {
     
@@ -205,7 +205,7 @@ https://github.com/aaas-edge-nodered-module
     
     }
 
-###Help
+### Help
 
 https://github.com/Azure/iotedgedev/wiki/edge-device-setup
 
